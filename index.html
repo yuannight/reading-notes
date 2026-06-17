@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Reading Notes 首页">
+        <span class="brand-mark">RN</span>
+        <span>Reading Notes</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#">Articles</a>
+        <a href="#">Tags</a>
+        <a href="#">About</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="workspace">
+        <aside class="library-sidebar" id="librarySidebar">
+          <div class="sidebar-head">
+            <span>Library</span>
+            <button
+              class="sidebar-toggle"
+              id="sidebarToggle"
+              type="button"
+              aria-controls="librarySidebar"
+              aria-expanded="true"
+              aria-label="收起或展开文章列表"
+            >
+              ‹
+            </button>
+          </div>
+          <section class="sidebar-group" aria-label="标题搜索">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search" placeholder="搜索文章标题" />
+            </label>
+          </section>
+
+          <section class="sidebar-group" aria-label="日期筛选">
+            <label class="date-filter">
+              <span>日期</span>
+              <select id="dateFilter">
+                <option value="all">全部时间</option>
+                <option value="recent">最近 30 天</option>
+                <option value="2026-06">2026 年 6 月</option>
+                <option value="2026-05">2026 年 5 月</option>
+              </select>
+            </label>
+          </section>
+
+          <section class="tag-panel" aria-label="标签筛选">
+            <div class="section-heading">
+              <span>Tags</span>
+            </div>
+            <div class="tag-filter" id="tagFilters">
+              <button class="active" data-tag="all">全部标签</button>
+              <button data-tag="AI">AI</button>
+              <button data-tag="Design">Design</button>
+              <button data-tag="Systems">Systems</button>
+              <button data-tag="Culture">Culture</button>
+              <button data-tag="Tools">Tools</button>
+              <button data-tag="Research">Research</button>
+              <button data-tag="Product">Product</button>
+              <button data-tag="Writing">Writing</button>
+              <button data-tag="Web">Web</button>
+              <button data-tag="UX">UX</button>
+              <button data-tag="Reading">Reading</button>
+              <button data-tag="Notes">Notes</button>
+            </div>
+          </section>
+
+          <section class="note-list" aria-label="文章列表">
+            <div class="section-heading">
+              <span>Articles</span>
+              <span id="resultCount">6</span>
+            </div>
+            <div id="noteList" class="note-list-inner"></div>
+          </section>
+        </aside>
+
+        <article class="note-detail" id="noteDetail" aria-live="polite"></article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
