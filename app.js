@@ -124,7 +124,7 @@ function renderDetail() {
       ${tags.map((tag) => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join("")}
     </div>
     <h2>${escapeHtml(note.title)}</h2>
-    <p class="detail-summary">${escapeHtml(note.summary)}</p>
+    <div class="detail-summary">${renderSummary(note.summary)}</div>
   `;
 }
 
@@ -153,6 +153,15 @@ function formatDate(date) {
 function formatMonth(month) {
   const [year, value] = month.split("-");
   return `${year} 年 ${Number(value)} 月`;
+}
+
+function renderSummary(summary) {
+  const paragraphs = String(summary || "")
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
+  return paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
 }
 
 function escapeHtml(value) {

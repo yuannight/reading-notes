@@ -390,6 +390,14 @@ body.sidebar-collapsed .note-detail {
   overflow-wrap: anywhere;
 }
 
+.detail-summary p {
+  margin: 0;
+}
+
+.detail-summary p + p {
+  margin-top: 16px;
+}
+
 .empty-state {
   padding: 42px 0;
   color: var(--muted);
