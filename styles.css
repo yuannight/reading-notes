@@ -441,6 +441,15 @@ body.sidebar-collapsed .note-detail {
   font-size: 13px;
 }
 
+.source-card .source-url {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
 .source-card a {
   flex: 0 0 auto;
   color: var(--accent);

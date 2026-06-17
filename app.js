@@ -180,6 +180,7 @@ function renderSourceSection(note) {
         <div>
           <p>${escapeHtml(note.title || "原文链接")}</p>
           ${sourceMeta ? `<span>${sourceMeta}</span>` : ""}
+          <a class="source-url" href="${escapeAttribute(source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source)}</a>
         </div>
         <a href="${escapeAttribute(source)}" target="_blank" rel="noopener noreferrer">阅读全文</a>
       </div>
