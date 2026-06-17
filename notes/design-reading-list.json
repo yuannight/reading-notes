@@ -1,0 +1,33 @@
+{
+  "id": "design-reading-list",
+  "title": "设计阅读清单的真正价值，是帮你重新进入上下文",
+  "type": "HTML",
+  "status": "Published",
+  "date": "2026-05-30",
+  "source": "design-reading-list.html",
+  "author": "Avery Stone",
+  "publisher": "Studio Journal",
+  "collectedAt": "2026-06-01",
+  "image": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=900&q=80",
+  "tags": [
+    "Design",
+    "Culture",
+    "Reading",
+    "Writing"
+  ],
+  "summary": "文章把阅读清单看作一种上下文恢复工具，而不是收藏夹。好的清单不仅保存链接，也保存当时为什么值得读、读完后改变了什么判断，以及后续可以接到哪些主题上。",
+  "excerpts": [
+    "A reading list is useful when it can return you to the question you had before opening the article.",
+    "Categorization should serve re-entry, not taxonomy for its own sake.",
+    "The best notes leave enough friction to make rereading intentional."
+  ],
+  "keyPoints": [
+    "分类的目标是帮助重新进入问题，而不是追求完美目录。",
+    "摘要需要保留文章的语气和限定条件。",
+    "公开博客可以只展示整理后的版本，但内部仍应保留来源线索。"
+  ],
+  "questions": [
+    "公开页是否展示完整摘录？",
+    "哪些内部字段不适合发布？"
+  ]
+}

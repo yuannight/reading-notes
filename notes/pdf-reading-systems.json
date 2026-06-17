@@ -1,0 +1,34 @@
+{
+  "id": "pdf-reading-systems",
+  "title": "PDF 阅读器为什么总是很难变成真正的研究工具",
+  "type": "PDF",
+  "status": "Summarized",
+  "date": "2026-06-08",
+  "source": "reading-systems-whitepaper.pdf",
+  "author": "Nolan Hart",
+  "publisher": "Independent Notes",
+  "collectedAt": "2026-06-10",
+  "image": "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80",
+  "tags": [
+    "Systems",
+    "Tools",
+    "Research",
+    "Reading",
+    "Notes"
+  ],
+  "summary": "这份 PDF 从阅读行为出发，解释为什么很多阅读器停留在标注层面，难以支持后续写作。它提醒我们：摘录、标签和摘要之间必须有稳定的数据结构，否则 AI 只能生成一次性的文本，而不能形成可持续复用的知识资产。",
+  "excerpts": [
+    "Highlighting is not note-taking; it is merely the first trace of attention.",
+    "A research tool has to preserve the path from source text to interpretation.",
+    "The moment summaries detach from excerpts, they become difficult to audit."
+  ],
+  "keyPoints": [
+    "摘录是 AI 归纳的证据层，需要和总结一起保存。",
+    "阅读状态应该描述工作流，而不是只描述是否读完。",
+    "文件、网页和 HTML 需要统一成同一种笔记模型。"
+  ],
+  "questions": [
+    "摘录和摘要的最小字段应该是什么？",
+    "是否需要为每条 AI 归纳保存模型和提示词版本？"
+  ]
+}

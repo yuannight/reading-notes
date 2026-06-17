@@ -1,0 +1,31 @@
+{
+  "id": "system-notes-index",
+  "title": "系统化笔记不是把所有东西都表格化",
+  "type": "PDF",
+  "status": "Reviewed",
+  "date": "2026-05-02",
+  "source": "system-notes-index.pdf",
+  "author": "Rhea Martin",
+  "publisher": "Methods Quarterly",
+  "collectedAt": "2026-05-05",
+  "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+  "tags": [
+    "Systems",
+    "Research",
+    "Notes"
+  ],
+  "summary": "这篇文章提醒读者，结构化不是把每一段内容都拆成字段，而是让重要关系可以被找回。它支持一种中间路线：原文摘录保持自然语言，元数据和状态保持结构化。",
+  "excerpts": [
+    "Structure should make return easier, not reading harder.",
+    "The index is valuable when it helps a reader continue a thought.",
+    "Not every insight deserves a field; some deserve a paragraph."
+  ],
+  "keyPoints": [
+    "自然语言和结构化字段需要共存。",
+    "索引应该围绕问题组织。",
+    "状态是工作流字段，不是内容字段。"
+  ],
+  "questions": [
+    "首页更应该按时间、主题还是状态组织？"
+  ]
+}

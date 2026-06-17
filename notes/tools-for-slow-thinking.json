@@ -1,0 +1,32 @@
+{
+  "id": "tools-for-slow-thinking",
+  "title": "慢思考工具需要减少整理时的仪式感",
+  "type": "Web",
+  "status": "Reading",
+  "date": "2026-05-21",
+  "source": "https://example.com/tools-for-slow-thinking",
+  "author": "Jon Bell",
+  "publisher": "Small Tools Weekly",
+  "collectedAt": "2026-05-22",
+  "image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80",
+  "tags": [
+    "Tools",
+    "Systems",
+    "Writing"
+  ],
+  "summary": "作者批评了许多知识管理工具的重仪式感：用户需要先决定分类、模板和数据库关系，才能开始记录。文章主张先捕获，再逐渐结构化，让工具服务于思考节奏。",
+  "excerpts": [
+    "The cost of organization often arrives before the value of the note.",
+    "Slow thinking needs low ceremony at capture and richer structure after reflection.",
+    "A system should accept messy inputs without making messiness permanent."
+  ],
+  "keyPoints": [
+    "收集阶段要轻，复核阶段再补结构。",
+    "AI 适合做初步整理，但不应该替代人的复核判断。",
+    "状态字段能帮助用户知道下一步该做什么。"
+  ],
+  "questions": [
+    "收集入口是否需要支持命令行？",
+    "状态流转是否应自动推进？"
+  ]
+}
