@@ -32,9 +32,10 @@ jobs:
 
       - name: Build static site
         run: |
-          mkdir -p _site/data
+          mkdir -p _site/data _site/assets
           cp index.html styles.css app.js _site/
           cp data/notes.json _site/data/
+          cp -R assets/. _site/assets/
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4

@@ -1,4 +1,5 @@
 let notes = [];
+const DEFAULT_COVER_IMAGE = "./assets/default-cover.svg";
 
 const state = {
   selectedId: "",
@@ -93,7 +94,8 @@ function renderNoteList() {
 }
 
 function renderNoteItem(note) {
-  const imageStyle = note.image ? ` style="background-image: url('${escapeAttribute(note.image)}')"` : "";
+  const image = note.image || DEFAULT_COVER_IMAGE;
+  const imageStyle = ` style="background-image: url('${escapeAttribute(image)}')"`;
   return `
     <button class="note-item ${note.id === state.selectedId ? "active" : ""}" data-id="${escapeAttribute(note.id)}">
       <span class="thumb"${imageStyle}></span>

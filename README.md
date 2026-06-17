@@ -25,6 +25,7 @@ Reading Notes 是一个个人阅读资料整理与发布项目。它把网页、
 ├── app.js                      # 前端交互逻辑，运行时读取 data/notes.json
 ├── notes/                      # 单篇阅读笔记，一篇文章一个 JSON
 ├── data/notes.json             # 构建产物，页面实际读取的数据文件
+├── assets/default-cover.svg    # 文章缺少头图时使用的默认封面
 ├── scripts/build-data.mjs      # 汇总 notes/*.json 到 data/notes.json
 ├── scripts/validate-notes.mjs  # 校验 notes/*.json 的字段和格式
 ├── .github/workflows/          # GitHub Pages 自动发布流水线
@@ -105,7 +106,7 @@ http://127.0.0.1:4173/
   // 发布方、站点或来源
   "publisher": "来源",
 
-  // 文章首图 URL，可为空字符串
+  // 文章首图 URL，可为空字符串；为空时前端会使用 assets/default-cover.svg
   "image": "https://example.com/cover.png",
 
   // 用于筛选和归类的标签
