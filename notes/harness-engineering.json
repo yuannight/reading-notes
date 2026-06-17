@@ -1,0 +1,29 @@
+{
+  "id": "harness-engineering",
+  "title": "Harness engineering: leveraging Codex in an agent-first world",
+  "source": "https://openai.com/index/harness-engineering/",
+  "type": "Web",
+  "date": "2026-02-11",
+  "collectedAt": "2026-06-17",
+  "author": "Ryan Lopopolo",
+  "publisher": "OpenAI",
+  "image": "",
+  "tags": ["AI", "Codex", "Agent", "软件工程", "工程实践"],
+  "summary": "这篇文章总结了 OpenAI 团队用 Codex 从空仓库开始构建一个内部 beta 产品的实验：约五个月内，团队坚持“人类不手写代码”的约束，让 Codex 生成应用逻辑、测试、CI、文档、观测和内部工具。文章的重点不是炫耀代码产量，而是解释工程师角色如何迁移到更高层：设计环境、表达意图、补齐工具、建立反馈回路，让 agent 能可靠地推进工作。",
+  "excerpts": [
+    "Humans steer. Agents execute.",
+    "give Codex a map, not a 1,000-page instruction manual.",
+    "Agent legibility is the goal",
+    "building software still demands discipline"
+  ],
+  "keyPoints": [
+    "团队把仓库本身变成知识系统，避免让 agent 依赖散落在聊天、文档或人脑中的上下文。",
+    "提升 agent 可读性是核心策略，包括让 UI、日志、指标、追踪和架构约束都能被 Codex 直接访问和验证。",
+    "高吞吐改变了合并与评审哲学：小 PR、快速迭代、agent-to-agent review 和自动修复比传统长周期阻塞更适配。",
+    "完全 agent 生成也会带来漂移和熵增，因此需要把团队品味、架构边界和质量原则机械化、持续化。"
+  ],
+  "questions": [
+    "类似 agent-first 工程模式在小型个人项目里，哪些规则值得提前编码，哪些可以先保持轻量？",
+    "当仓库知识成为系统事实来源时，如何避免文档和规则本身继续膨胀成新的上下文负担？"
+  ]
+}
