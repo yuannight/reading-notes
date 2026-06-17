@@ -230,14 +230,14 @@ searchInput.addEventListener("input", (event) => {
 
 sidebarToggle.addEventListener("click", () => {
   const isCollapsed = document.body.classList.toggle("sidebar-collapsed");
-  sidebarToggle.textContent = isCollapsed ? "›" : "‹";
+  sidebarToggle.textContent = isCollapsed ? "→" : "←";
   sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
 });
 
 function syncSidebarForViewport(event) {
   const shouldCollapse = event.matches;
   document.body.classList.toggle("sidebar-collapsed", shouldCollapse);
-  sidebarToggle.textContent = shouldCollapse ? "›" : "‹";
+  sidebarToggle.textContent = shouldCollapse ? "→" : "←";
   sidebarToggle.setAttribute("aria-expanded", String(!shouldCollapse));
 }
 

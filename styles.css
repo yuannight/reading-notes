@@ -155,20 +155,31 @@ body.sidebar-collapsed .library-sidebar > :not(.sidebar-head) {
 
 .sidebar-toggle {
   position: fixed;
-  top: 96px;
-  left: calc(var(--shell-gutter) + var(--sidebar-width) - 16px);
+  top: 108px;
+  left: calc(var(--shell-gutter) + 16px);
   z-index: 35;
   display: grid;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   place-items: center;
   border: 1px solid var(--line);
   border-radius: 50%;
   background: var(--white);
-  color: var(--ink);
-  box-shadow: 0 10px 26px rgba(35, 33, 30, 0.12);
-  font-size: 22px;
+  color: var(--muted);
+  box-shadow: 0 8px 22px rgba(35, 33, 30, 0.1);
+  font-size: 20px;
   line-height: 1;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.sidebar-toggle:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
 }
 
 body.sidebar-collapsed .sidebar-head {
@@ -514,6 +525,10 @@ body.sidebar-collapsed .note-detail {
 
   .sidebar-toggle {
     top: 80px;
+    left: 22px;
+  }
+
+  body:not(.sidebar-collapsed) .sidebar-toggle {
     left: calc(14px + var(--sidebar-width) - 17px);
   }
 
@@ -548,6 +563,11 @@ body.sidebar-collapsed .note-detail {
 
   .sidebar-toggle {
     top: 74px;
+    left: auto;
+    right: 18px;
+  }
+
+  body:not(.sidebar-collapsed) .sidebar-toggle {
     left: auto;
     right: 18px;
   }
