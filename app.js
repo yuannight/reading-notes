@@ -124,7 +124,11 @@ function renderDetail() {
       ${tags.map((tag) => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join("")}
     </div>
     <h2>${escapeHtml(note.title)}</h2>
-    <div class="detail-summary">${renderSummary(note.summary)}</div>
+    <section class="detail-section">
+      <h3>总结</h3>
+      <div class="detail-summary">${renderSummary(note.summary)}</div>
+    </section>
+    ${renderSourceSection(note)}
   `;
 }
 
@@ -162,6 +166,25 @@ function renderSummary(summary) {
     .filter(Boolean);
 
   return paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+}
+
+function renderSourceSection(note) {
+  const source = String(note.source || "").trim();
+  if (!source) return "";
+
+  const sourceMeta = [note.publisher, note.author].filter(Boolean).map(escapeHtml).join(" · ");
+  return `
+    <section class="detail-section source-section">
+      <h3>原文</h3>
+      <div class="source-card">
+        <div>
+          <p>${escapeHtml(note.title || "原文链接")}</p>
+          ${sourceMeta ? `<span>${sourceMeta}</span>` : ""}
+        </div>
+        <a href="${escapeAttribute(source)}" target="_blank" rel="noopener noreferrer">阅读全文</a>
+      </div>
+    </section>
+  `;
 }
 
 function escapeHtml(value) {

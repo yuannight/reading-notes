@@ -380,10 +380,24 @@ body.sidebar-collapsed .note-detail {
   text-wrap: balance;
 }
 
+.detail-section {
+  width: 100%;
+  max-width: 760px;
+  margin-top: 28px;
+}
+
+.detail-section h3 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .detail-summary {
   width: 100%;
   max-width: 760px;
-  margin: 20px 0 0;
+  margin: 0;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.9;
@@ -396,6 +410,46 @@ body.sidebar-collapsed .note-detail {
 
 .detail-summary p + p {
   margin-top: 16px;
+}
+
+.source-section {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.source-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  padding: 18px 20px;
+  border: 1px solid var(--soft-line);
+  border-radius: 8px;
+  background: rgba(255, 253, 250, 0.68);
+}
+
+.source-card p {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.source-card span {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.source-card a {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.source-card a:hover {
+  text-decoration: underline;
 }
 
 .empty-state {
@@ -508,6 +562,11 @@ body.sidebar-collapsed .note-detail {
     line-height: 1.82;
   }
 
+  .source-card {
+    display: grid;
+    gap: 14px;
+  }
+
 }
 
 @media (max-width: 460px) {
@@ -515,6 +574,7 @@ body.sidebar-collapsed .note-detail {
   .note-detail,
   .detail-kicker,
   .note-detail h2,
+  .detail-section,
   .detail-summary {
     width: 100%;
     max-width: calc(100vw - 24px);
