@@ -15,6 +15,7 @@ const searchInput = document.querySelector("#searchInput");
 const dateFilter = document.querySelector("#dateFilter");
 const tagFilters = document.querySelector("#tagFilters");
 const sidebarToggle = document.querySelector("#sidebarToggle");
+const sidebarToggleIcon = sidebarToggle.querySelector(".edge-icon");
 const compactLayoutQuery = window.matchMedia("(max-width: 1100px)");
 
 async function loadNotes() {
@@ -230,15 +231,20 @@ searchInput.addEventListener("input", (event) => {
 
 sidebarToggle.addEventListener("click", () => {
   const isCollapsed = document.body.classList.toggle("sidebar-collapsed");
-  sidebarToggle.textContent = isCollapsed ? "→" : "←";
-  sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
+  updateSidebarToggle(isCollapsed);
 });
 
 function syncSidebarForViewport(event) {
   const shouldCollapse = event.matches;
   document.body.classList.toggle("sidebar-collapsed", shouldCollapse);
-  sidebarToggle.textContent = shouldCollapse ? "→" : "←";
-  sidebarToggle.setAttribute("aria-expanded", String(!shouldCollapse));
+  updateSidebarToggle(shouldCollapse);
+}
+
+function updateSidebarToggle(isCollapsed) {
+  sidebarToggleIcon.textContent = isCollapsed ? "→" : "←";
+  sidebarToggle.dataset.collapsed = String(isCollapsed);
+  sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
+  sidebarToggle.setAttribute("aria-label", isCollapsed ? "展开文章列表" : "收起文章列表");
 }
 
 compactLayoutQuery.addEventListener("change", syncSidebarForViewport);

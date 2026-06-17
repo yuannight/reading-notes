@@ -25,16 +25,6 @@
         <aside class="library-sidebar" id="librarySidebar">
           <div class="sidebar-head">
             <span>Library</span>
-            <button
-              class="sidebar-toggle"
-              id="sidebarToggle"
-              type="button"
-              aria-controls="librarySidebar"
-              aria-expanded="true"
-              aria-label="收起或展开文章列表"
-            >
-              ←
-            </button>
           </div>
           <section class="sidebar-group" aria-label="标题搜索">
             <label class="search-box">
@@ -84,6 +74,20 @@
             <div id="noteList" class="note-list-inner"></div>
           </section>
         </aside>
+
+        <button
+          class="sidebar-edge-toggle"
+          id="sidebarToggle"
+          type="button"
+          aria-controls="librarySidebar"
+          aria-expanded="true"
+          aria-label="收起或展开文章列表"
+        >
+          <span class="edge-line" aria-hidden="true"></span>
+          <span class="edge-hint" aria-hidden="true">
+            <span class="edge-icon">←</span>
+          </span>
+        </button>
 
         <article class="note-detail" id="noteDetail" aria-live="polite"></article>
       </section>
