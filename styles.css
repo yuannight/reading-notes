@@ -390,40 +390,6 @@ body.sidebar-collapsed .note-detail {
   overflow-wrap: anywhere;
 }
 
-.quote-section {
-  width: 100%;
-  max-width: 100%;
-  margin-top: 34px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-}
-
-.quote-section h3 {
-  margin: 0 0 18px;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.quote-list {
-  display: grid;
-  gap: 20px;
-  min-width: 0;
-}
-
-blockquote {
-  max-width: 100%;
-  margin: 0;
-  padding: 2px 0 2px 18px;
-  border-left: 3px solid var(--amber);
-  color: var(--ink);
-  font-family: "Noto Serif SC", serif;
-  font-size: clamp(21px, 2.4vw, 32px);
-  line-height: 1.58;
-  overflow-wrap: anywhere;
-  text-wrap: pretty;
-}
-
 .empty-state {
   padding: 42px 0;
   color: var(--muted);
@@ -534,12 +500,6 @@ blockquote {
     line-height: 1.82;
   }
 
-  blockquote {
-    font-size: clamp(18px, 5vw, 22px);
-    line-height: 1.55;
-    word-break: break-word;
-    text-wrap: wrap;
-  }
 }
 
 @media (max-width: 460px) {
@@ -547,10 +507,7 @@ blockquote {
   .note-detail,
   .detail-kicker,
   .note-detail h2,
-  .detail-summary,
-  .quote-section,
-  .quote-list,
-  blockquote {
+  .detail-summary {
     width: 100%;
     max-width: calc(100vw - 24px);
   }

@@ -117,7 +117,6 @@ function renderDetail() {
   }
 
   const tags = note.tags || [];
-  const excerpts = note.excerpts || [];
   noteDetail.innerHTML = `
     <div class="detail-kicker">
       <span class="source-badge">${escapeHtml(note.type || "Text")}</span>
@@ -126,17 +125,6 @@ function renderDetail() {
     </div>
     <h2>${escapeHtml(note.title)}</h2>
     <p class="detail-summary">${escapeHtml(note.summary)}</p>
-
-    <section class="quote-section">
-      <h3>引文</h3>
-      <div class="quote-list">
-        ${
-          excerpts.length > 0
-            ? excerpts.map((excerpt) => `<blockquote>${escapeHtml(excerpt)}</blockquote>`).join("")
-            : `<p class="empty-state">这篇文章还没有整理引文。</p>`
-        }
-      </div>
-    </section>
   `;
 }
 
