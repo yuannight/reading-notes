@@ -1,5 +1,40 @@
 [
   {
+    "id": "zhihu-loop-engineering-discussion",
+    "title": "如何看待由 OpenClaw 作者引发的 Loop 工程讨论？",
+    "source": "https://www.zhihu.com/question/2048003050531558553/answer/2048094419505746085?share_code=1aiWiv6ln3qeP&utm_psn=2048322691791377523",
+    "type": "Web",
+    "date": "2026-07-01",
+    "collectedAt": "2026-07-01",
+    "author": "",
+    "publisher": "知乎",
+    "image": "assets/default-cover.svg",
+    "tags": [
+      "AI",
+      "Agent",
+      "软件工程",
+      "Loop Engineering",
+      "观点讨论"
+    ],
+    "summary": "这个知乎问题围绕 OpenClaw 作者 Peter 提出的 “Loop 工程” 展开：开发者是否应该从直接写 Prompt，转向设计循环，让 Agent 在持续反馈中执行、验证和修正。讨论的焦点并不只是一个新名词是否成立，而是 AI Coding 的工程重心是否正在从一次性对话，转向更接近 CI、控制系统和软件自动化基础设施的长期运行机制。\n\n当前高赞第一的回答采取了明显的降温态度。它认为 Loop 工程很大程度上是 AI 圈对既有软件工程概念的重新包装：Spec 可以理解成给 AI 看的 PRD，Harness 更像 Agent 使用的执行框架，而 Loop 则接近 CI/CD 中早已存在的反馈循环。按照这个视角，所谓 Loop 工程就是让模型改代码、跑测试、读错误、继续修，直到测试通过并提交 PR；这和 Jenkins、GitHub Actions、持续集成里的触发、隔离环境、执行、验证、通知并没有本质断裂。这个回答的价值在于提醒读者不要被新术语牵着走，先看它是否真正带来了新的工程能力。\n\n第二个高赞回答则把 Loop Engineering 放进更大的 AI Coding 演进路径里理解：早期是 Prompt Engineering，重点是如何向模型下指令；后来是 Context Engineering，重点变成上下文、记忆、RAG、工具调用和 MCP；再往后，核心问题变成如何设计一个可以持续观察、行动、验证、修正的循环。它借用了 Kubernetes 控制器和 reconciliation loop 的类比：系统有期望状态，也有真实状态，Loop 的职责是不断读取真实状态、比较差异、执行动作、写回状态，并在这个过程中逐步收敛。\n\n这个严肃框架最值得保留的部分，是它没有把 Agent 神化。Kubernetes 控制器通常面对的是相对确定的系统，而 LLM Agent 的行为是概率性的：它可能忘记上下文，可能误判任务完成，可能在自我评估中犯错。因此真正重要的不是“哪个模型更强”，而是如何设计目标、状态、评估器、终止条件、权限边界、人工审核和可观测性。人的角色也随之变化：不是单纯写提示词，而是把“什么算完成”“如何验证完成”“失败后如何回到循环”这些问题工程化。\n\n第三个高赞回答用更调侃的方式做了一张术语映射表，把 AI 圈的新词还原到传统计算机科学概念里：Prompt Engineering 像语句或表达式，Loop Engineering 像控制流，Harness Engineering 像运行时或虚拟机，Context Engineering 像内存管理，Memory Engineering 像持久化和数据库，Eval / Verifier Engineering 像类型系统、断言和单元测试，Orchestration Engineering 像并发和调度。它的潜台词是：这些词不是完全没用，但只有能映射回成熟工程概念时才有价值，否则就容易变成概念营销。\n\n综合来看，Loop Engineering 未必是凭空出现的新范式，但它确实指出了 Agent 编程里越来越关键的一层：当 AI 可以大量生成代码时，软件工程的瓶颈会转移到反馈循环、验证机制、状态管理和控制边界上。比较稳妥的理解是，不必追逐每个新词，但可以吸收它背后的工程提醒：不要只依赖一次 Prompt 的表现，而要让 Agent 在可观测、可验证、可纠错、可中止的系统里工作。",
+    "excerpts": [
+      "开发者不应该继续直接写 Prompt，而应该设计 Loop(循环) 来 Prompt Agent。",
+      "Agent 会忘，仓库不会忘",
+      "挑一个你喜欢的去炒吧",
+      "学慢一点"
+    ],
+    "keyPoints": [
+      "第一种观点认为 Loop 工程主要是 CI/CD、测试反馈和自动修复流程在 AI 语境下的再包装。",
+      "第二种观点认为 Loop 工程是 AI Coding 从提示词走向控制循环的自然演进，关键是状态、评估和收敛机制。",
+      "第三种观点把相关术语映射回传统计算机科学概念，提醒读者用成熟工程框架理解新词。",
+      "更稳妥的结论是：不必追逐概念，但应重视 Agent 工作流里的反馈循环、验证机制和边界设计。"
+    ],
+    "questions": [
+      "个人或小型项目里，哪些 Loop 机制值得优先做：自动测试、日志观察、任务拆分、还是 PR 审核？",
+      "当 Agent 行为不可完全确定时，怎样设计评估器和人工介入点，才能避免循环看似收敛但实际偏离目标？"
+    ]
+  },
+  {
     "id": "harness-engineering",
     "title": "Harness engineering: leveraging Codex in an agent-first world",
     "source": "https://openai.com/index/harness-engineering/",
